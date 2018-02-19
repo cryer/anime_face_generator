@@ -60,7 +60,7 @@ if __name__ == '__main__':
                 g_loss.backward()
                 optimizerG.step()
             if step % 50 == 0:
-                tv.utils.save_image(G_fakeimage.data[:64].cpu(), '%s/%s_%s.png' % ('imgs/', epoch, step),
+                tv.utils.save_image(G_fakeimage.data[:64].cpu(), '%s/%s_%s.png' % ('image/', epoch, step),
                                     normalize=True,
                                     range=(-1, 1))
         if epoch % 50 == 0:
